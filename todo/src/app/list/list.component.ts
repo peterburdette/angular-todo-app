@@ -19,4 +19,8 @@ export class ListComponent implements OnInit {
   onAddTask(task: any) {
     this.listService.addTask(task);
   }
+
+  onCompleteTask(task: any) {
+    this.listService.completeTask(task);
+  }
 }

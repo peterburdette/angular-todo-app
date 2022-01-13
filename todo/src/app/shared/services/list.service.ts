@@ -22,6 +22,7 @@ export class ListService {
 
   completeTask(task: any) {
     let result = this.toDoList.filter((item) => item.id !== task.id);
+    console.log(result);
     this.toDoList = result;
   }
 }
