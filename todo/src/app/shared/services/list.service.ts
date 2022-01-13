@@ -15,4 +15,13 @@ export class ListService {
   returnTasks() {
     return this.toDoList;
   }
+
+  addTask(task: any) {
+    this.toDoList.push(task);
+  }
+
+  completeTask(task: any) {
+    let result = this.toDoList.filter((item) => item.id !== task.id);
+    this.toDoList = result;
+  }
 }

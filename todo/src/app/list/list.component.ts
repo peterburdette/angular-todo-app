@@ -13,6 +13,10 @@ export class ListComponent implements OnInit {
 
   ngOnInit(): void {
     this.taskList = this.listService.returnTasks();
-    console.log(this.taskList);
+    // console.log(this.taskList);
+  }
+
+  onAddTask(task: any) {
+    this.listService.addTask(task);
   }
 }
