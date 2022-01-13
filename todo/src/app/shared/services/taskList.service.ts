@@ -16,13 +16,15 @@ export class TaskListService {
     return this.toDoList;
   }
 
+  getCount() {
+    return this.toDoList.length;
+  }
+
   addTask(task: any) {
     this.toDoList.push(task);
   }
 
   completeTask(task: any) {
-    let result = this.toDoList.filter((item) => item.id !== task.id);
-    console.log(result);
-    this.toDoList = result;
+    this.toDoList = this.toDoList.filter((item) => item.id !== task.id).slice();
   }
 }
