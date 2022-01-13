@@ -1,3 +1,8 @@
 <div class="container">
-  <p>list works!</p>
+  <ul>
+    <li *ngFor="let task of taskList">
+      <h5>{{ task.taskName }}</h5>
+      <p>Due Date: {{ task.dueDate }}</p>
+    </li>
+  </ul>
 </div>
