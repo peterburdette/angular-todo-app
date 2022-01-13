@@ -2,11 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import { TaskListService } from '../shared/services/taskList.service';
 
 @Component({
-  selector: 'app-list',
+  selector: 'app-task-list',
   templateUrl: './taskList.component.html',
   styleUrls: ['./taskList.component.css'],
 })
-export class ListComponent implements OnInit {
+export class TaskListComponent implements OnInit {
   taskList: any;
 
   constructor(private taskListService: TaskListService) {}

@@ -5,7 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { HeaderComponent } from './header/header.component';
-import { ListComponent } from './taskList/taskList.component';
+import { TaskListComponent } from './taskList/taskList.component';
 import { AboutComponent } from './about/about.component';
 
 @NgModule({
@@ -13,7 +13,7 @@ import { AboutComponent } from './about/about.component';
     AppComponent,
     HomeComponent,
     HeaderComponent,
-    ListComponent,
+    TaskListComponent,
     AboutComponent,
   ],
   imports: [BrowserModule, AppRoutingModule],
