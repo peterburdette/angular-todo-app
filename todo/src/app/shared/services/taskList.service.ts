@@ -3,7 +3,7 @@ import { Injectable } from '@angular/core';
 @Injectable({
   providedIn: 'root',
 })
-export class ListService {
+export class TaskListService {
   toDoList = [
     { id: 1, taskName: 'test 1', dueDate: '11/25/2022' },
     { id: 2, taskName: 'test 2', dueDate: '11/25/2023' },
