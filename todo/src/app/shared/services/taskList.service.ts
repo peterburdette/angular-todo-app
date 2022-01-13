@@ -25,6 +25,6 @@ export class TaskListService {
   }
 
   completeTask(task: any) {
-    this.toDoList = this.toDoList.filter((item) => item.id !== task.id).slice();
+    this.toDoList = this.toDoList.filter((item) => item.id !== task.id);
   }
 }

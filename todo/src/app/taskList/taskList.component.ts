@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, DoCheck, OnInit } from '@angular/core';
 import { TaskListService } from '../shared/services/taskList.service';
 
 @Component({
@@ -6,14 +6,15 @@ import { TaskListService } from '../shared/services/taskList.service';
   templateUrl: './taskList.component.html',
   styleUrls: ['./taskList.component.css'],
 })
-export class TaskListComponent implements OnInit {
+export class TaskListComponent implements OnInit, DoCheck {
   taskList: any;
 
   constructor(private taskListService: TaskListService) {}
 
-  ngOnInit(): void {
+  ngOnInit(): void {}
+
+  ngDoCheck() {
     this.taskList = this.taskListService.returnTasks();
-    // console.log(this.taskList);
   }
 
   onAddTask(task: any) {
