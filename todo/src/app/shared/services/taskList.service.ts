@@ -1,13 +1,14 @@
 import { Injectable } from '@angular/core';
+import { TaskModel } from '../models/task.model';
 
 @Injectable({
   providedIn: 'root',
 })
 export class TaskListService {
-  toDoList = [
-    { id: 1, taskName: 'test 1', dueDate: '11/25/2022', complete: false },
-    { id: 2, taskName: 'test 2', dueDate: '11/25/2023', complete: false },
-    { id: 3, taskName: 'test 3', dueDate: '11/25/2024', complete: false },
+  toDoList: TaskModel[] = [
+    // { id: 1, taskName: 'test 1', dueDate: '11/25/2022', complete: false },
+    // { id: 2, taskName: 'test 2', dueDate: '11/25/2023', complete: false },
+    // { id: 3, taskName: 'test 3', dueDate: '11/25/2024', complete: false },
   ];
 
   constructor() {}
