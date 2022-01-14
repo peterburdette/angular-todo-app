@@ -23,6 +23,7 @@ export class TaskListComponent implements OnInit, DoCheck {
       id: 1,
       taskName: data.form.value.taskName,
       dueDate: data.form.value.dueDate,
+      complete: false,
     };
 
     console.log(task);

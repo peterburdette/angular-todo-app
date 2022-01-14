@@ -9,13 +9,10 @@
 
       <button class="btn btn-primary" type="submit">Submit</button>
     </form>
-    <app-task-item [task]="task" *ngFor="let task of taskList"></app-task-item>
+    <app-task-item
+      [task]="task"
+      (completedTask)="onCompleteTask($event)"
+      *ngFor="let task of taskList"
+    ></app-task-item>
   </div>
 </div>
-
-<button
-  class="btn btn-primary"
-  (click)="onCompleteTask({ id: 1, taskName: 'test 1', dueDate: '11/25/2022' })"
->
-  Complete Task
-</button>

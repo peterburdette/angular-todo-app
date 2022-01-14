@@ -2,5 +2,6 @@
   <li>
     <h5>{{ task.taskName }}</h5>
     <p>Due Date: {{ task.dueDate }}</p>
+    <button class="btn btn-primary" (click)="onComplete(task)">Complete</button>
   </li>
 </ul>
