@@ -7,6 +7,7 @@ import { HomeComponent } from './home/home.component';
 import { HeaderComponent } from './header/header.component';
 import { TaskListComponent } from './taskList/taskList.component';
 import { AboutComponent } from './about/about.component';
+import { TaskItemComponent } from './taskList/task-item/task-item.component';
 
 @NgModule({
   declarations: [
@@ -15,6 +16,7 @@ import { AboutComponent } from './about/about.component';
     HeaderComponent,
     TaskListComponent,
     AboutComponent,
+    TaskItemComponent,
   ],
   imports: [BrowserModule, AppRoutingModule],
   providers: [],
