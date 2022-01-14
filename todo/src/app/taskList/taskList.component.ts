@@ -20,7 +20,7 @@ export class TaskListComponent implements OnInit, DoCheck {
   onAddTask(data: any) {
     // restructures the data to add in a unique id
     let task = {
-      id: 1,
+      id: this.taskListService.generateId(),
       taskName: data.form.value.taskName,
       dueDate: data.form.value.dueDate,
       complete: false,

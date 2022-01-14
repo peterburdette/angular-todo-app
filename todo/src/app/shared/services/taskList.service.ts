@@ -12,18 +12,31 @@ export class TaskListService {
 
   constructor() {}
 
+  // returns the list of existing tasks
   returnTasks() {
     return this.toDoList;
   }
 
+  // returns the count of all tasks within the toDoList array
   getCount() {
     return this.toDoList.length;
   }
 
+  // generates a unique id for each newly created task
+  generateId() {
+    let id = Math.floor(Math.random() * 10000);
+
+    for (const taskId of this.toDoList) {
+      return id !== taskId.id ? id : console.log('id already exists');
+    }
+  }
+
+  // adds new tasks to the toDoList array
   addTask(task: any) {
     this.toDoList.push(task);
   }
 
+  // removes completed tasks from the toDoList array
   completeTask(task: any) {
     this.toDoList = this.toDoList.filter((item) => item.id !== task.id);
   }
