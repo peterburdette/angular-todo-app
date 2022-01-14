@@ -1,13 +1,28 @@
 <div class="card container">
   <div class="card-body">
     <!-- taskForm is an object that contains the form data that gets passed to the onAddTask() method for object manipulation. It is then passed to the taskList service. -->
-    <form #taskForm="ngForm" (ngSubmit)="onAddTask(taskForm)">
-      <div class="form-group">
-        <input type="text" placeholder="task name" name="taskName" ngModel />
-        <input type="text" placeholder="due date" name="dueDate" ngModel />
+    <form class="row g-3" #taskForm="ngForm" (ngSubmit)="onAddTask(taskForm)">
+      <div class="col-auto">
+        <input
+          class="form-control"
+          type="text"
+          placeholder="task name"
+          name="taskName"
+          ngModel
+        />
       </div>
-
-      <button class="btn btn-primary" type="submit">Submit</button>
+      <div class="col-auto">
+        <input
+          class="form-control"
+          type="text"
+          placeholder="due date"
+          name="dueDate"
+          ngModel
+        />
+      </div>
+      <div class="col-auto">
+        <button class="btn btn-primary" type="submit">Submit</button>
+      </div>
     </form>
     <app-task-item
       [task]="task"
