@@ -1,3 +1,9 @@
 <div class="container">
-  <p>There are currently {{ count }} task(s) that need attending to!</p>
+  <p *ngIf="count !== 0; else addTasks">
+    There are currently {{ count }} task(s) that need attending to!
+  </p>
+  <ng-template #addTasks
+    >There are no tasks to complete. Add some
+    <a routerLink="/list">here</a>!</ng-template
+  >
 </div>
