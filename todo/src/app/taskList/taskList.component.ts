@@ -17,7 +17,16 @@ export class TaskListComponent implements OnInit, DoCheck {
     this.taskList = this.taskListService.returnTasks();
   }
 
-  onAddTask(task: any) {
+  onAddTask(data: any) {
+    // restructures the data to add in a unique id
+    let task = {
+      id: 1,
+      taskName: data.form.value.taskName,
+      dueDate: data.form.value.dueDate,
+    };
+
+    console.log(task);
+    // sends the new task to the taskService so it can be added to the toDoList array
     this.taskListService.addTask(task);
   }
 
