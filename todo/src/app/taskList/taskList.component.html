@@ -9,6 +9,7 @@
           placeholder="task name"
           name="taskName"
           ngModel
+          required
         />
       </div>
       <div class="col-auto">
@@ -18,10 +19,17 @@
           placeholder="due date"
           name="dueDate"
           ngModel
+          required
         />
       </div>
       <div class="col-auto">
-        <button class="btn btn-primary" type="submit">Submit</button>
+        <button
+          class="btn btn-primary"
+          type="submit"
+          [disabled]="!taskForm.valid"
+        >
+          Submit
+        </button>
       </div>
     </form>
     <app-task-item
